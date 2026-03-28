@@ -1,0 +1,52 @@
+@charset "utf-8";
+/* CSS Document */
+
+:root {
+    --animate-duration: 1s;
+    --animate-delay: 1s;
+    --animate-repeat: 1
+}
+
+.animate__animated {
+    animation-duration: 1s;
+    animation-duration: var(--animate-duration);
+    animation-fill-mode: both
+}
+
+.animate__animated.animate__infinite {
+    animation-iteration-count: infinite
+}
+@keyframes rubberBand {
+    0% {
+        transform: scaleX(1)
+    }
+
+    30% {
+        transform: scale3d(1.25,.75,1)
+    }
+
+    40% {
+        transform: scale3d(.75,1.25,1)
+    }
+
+    50% {
+        transform: scale3d(1.15,.85,1)
+    }
+
+    65% {
+        -webkit-transform: scale3d(.95,1.05,1);
+        transform: scale3d(.95,1.05,1)
+    }
+
+    75% {
+        transform: scale3d(1.05,.95,1)
+    }
+
+    to {
+        transform: scaleX(1)
+    }
+}
+
+.animate__rubberBand {
+    animation-name: rubberBand
+}

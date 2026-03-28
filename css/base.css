@@ -1,0 +1,80 @@
+@charset "utf-8";
+html {
+    background-color: #909090;
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-image: url("../img/ondas.gif") , url("../img/picos.gif");
+    background-position: left top, left bottom;
+    background-attachment: fixed;
+    background-repeat: repeat-x;
+}
+#contenedor {
+    width: 880px;
+    background-color: #ffffff;
+    margin: 70px auto;
+    box-shadow: 0 0 5px 0 #000000a3;
+}
+#header {position: relative;}
+#logo   {
+    background-image: url(../img/logo.png);
+    width: 129px;
+    height: 62px;
+    position: absolute;
+    left: 375px;
+    top: -25px;
+}
+#header ul {
+    list-style-type: none;
+    text-align: center;
+    background-color: #E7C85C;
+    padding-top: 3em;
+}
+#header ul li {
+    background-color: #4A88F5;
+    width: 150px;
+    display: inline-block;
+}
+#header ul li a {
+    text-decoration: none;
+    color: #E7C85C;
+    background-color: #00286E;
+    padding: 5px 0;
+    display: block;
+    transition: all 400ms ease;
+}
+    
+    #header ul li a:hover, #phome #lhome, #panim #lanim, #piframes #liframes, #pcontacto #lcontacto {
+    color: #00286E;
+    background-color: #E7C85C;
+    text-decoration: underline;
+}
+#texto {
+    padding: 1em;
+}
+#mascota {
+    background-image: url(../img/mascota.png);
+    width: 125px;
+    height: 158px;
+    position: fixed;
+    right: 20%;
+    bottom: -10px;
+    z-index: 10;
+}
+#barraInf {
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: .5em;
+    text-align: center;
+    width: 80%;
+    left: 10%;
+    position: fixed;
+    bottom: -24px;
+    opacity: .5;
+    transition: all 400ms ease;
+    cursor: pointer;
+    z-index: 1;
+}
+    #barraInf:hover{
+        opacity: 1;
+        bottom: 0;
+        z-index: 20;
+    }

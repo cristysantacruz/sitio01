@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>aquí título</title>
+    <meta name="description" content="aqu&iacute; descripci&oacute;n">
+<meta name="keywords" content="aquí kw">
+
+<style type="text/css">
+</style>
+<link href="css/base.css" rel="stylesheet" type="text/css">
+<link href="css/animaciones.css" rel="stylesheet" type="text/css">
+    <style>
+        
+        :root{
+            --color1:#B1AFAF;
+            --color2:#5E0082;
+        }
+        
+    #contenedor  {
+    padding-bottom: 2em;
+}
+    
+        #banner{
+            background: var(--color1) /*#B1AFAF*/;
+            position: relative;
+            width: 550px;
+            height: 250px;
+            margin: auto;
+            overflow: hidden;
+        }
+        #txt1, #txt2{font-size: 1.5em;}
+        #txt1{
+    position: absolute;
+    left: -203px;
+    top: 10px;
+    width: 208px;
+    height: 48px;
+    z-index: 20;
+        }
+        #txt2{
+    position: absolute;
+    left: 559px;
+    top: 134px;
+    width: 244px;
+    height: 58px;
+    z-index: 1;
+    }
+        #mascota2{
+    position: absolute;
+    left: 212px;
+    top: 37px;
+    transform: scale(1.1,1.1);
+    z-index: 10;
+        } 
+        /*primera parte de animación: definición:*/
+        @keyframes anim1{
+            0%{
+              left: -203px;  
+            }
+            50%{
+                color: red;
+                font-size: 1.5em;
+            }
+            100%{
+                left: 334px;
+                font-size: 2.5em;
+                color: red;
+            }
+        }
+        
+        @keyframes anim2{
+            0%{
+               left: 559px; 
+            }
+            50%{
+                font-size: 2.5em;
+                color: black;
+            }
+            100%{
+             left: 10px;
+             font-size: 2.5em;
+             color: blue;
+            }
+        }
+        @keyframes anim3{
+            0%{
+                transform: scale(2.2,2.2) rotate(0deg);
+                opacity: 0;
+            }
+            100%{
+                transform: scale(1.1, 1.1) rotate(360deg);
+                opacity: 1;
+            }
+        }
+        /*segunda parte de animación: declaración de clases:*/
+        .anim1{
+            animation-name: anim1;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in;
+            animation-direction: alternate;
+        }
+        .anim2{
+            animation-name: anim2;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in;
+            animation-direction: alternate;
+        }
+        .anim3{
+            animation-name: anim3;
+            animation-duration: 4s;
+            animation-iteration-count: 1;
+            animation-timing-function: ease-out;
+        }
+        
+        .despacito{
+            animation-duration: 2s;
+        }
+    </style>
+
+</head>
+
+<body id="panim">
+    <div id="contenedor">
+        <div id="header">
+            <div id="logo"></div>
+            <nav>
+                <ul>
+                    <li><a id="lhome" href="index.html">Home</a></li>
+                    <li><a id="lanim" href="animacion.html">Animación</a></li>
+                    <li><a id="liframes" href="iframes.html">iFrames</a></li>
+                    <li><a id="lcontacto" href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+          <div id="texto">
+                <h1>Animación</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima assumenda at nihil voluptatibus eius molestiae dicta, pariatur libero distinctio! Cumque mollitia ad labore recusandae veniam iure ut rem enim et!</p></div>
+            <div id="banner">
+              <h3 id="txt1" class="anim1">Texto uno</h3>
+                <h3 id="txt2" class="anim2">Texto dos</h3>
+            <img id="mascota2" class="animate__animated animate__rubberBand animate__infinite despacito" src="img/mascota.png" width="125" height="158" alt=""/> </div>
+        </div>
+    </div>
+    
+    
+    <div id="barraInf">
+        <p>contenido de barra inferior</p>
+    </div>
+    <div id="mascota"></div>
+</body>
+</html>

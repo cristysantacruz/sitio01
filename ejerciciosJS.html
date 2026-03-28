@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>aquí título</title>
+    <meta name="description" content="aqu&iacute; descripci&oacute;n">
+<meta name="keywords" content="aquí kw">
+
+<style type="text/css">
+</style>
+<link href="css/base.css" rel="stylesheet" type="text/css">
+</head>
+
+<body id="pcontacto">
+    <div id="contenedor">
+        <div id="header">
+            <div id="logo"></div>
+            <nav>
+                <ul>
+                    <li><a id="lhome" href="index.html">Home</a></li>
+                    <li><a id="lanim" href="animacion.html">Animación</a></li>
+                    <li><a id="liframes" href="iframes.html">iFrames</a></li>
+                    <li><a id="lcontacto" href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+          <div id="texto">
+                <h1>Ejercicios JS</h1>
+                <h3>Leyes de la robótica:</h3>
+                <p id="pLeyes">&nbsp;</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima assumenda at nihil voluptatibus eius molestiae dicta, pariatur libero distinctio! Cumque mollitia ad labore recusandae veniam iure ut rem enim et!</p>
+                <h3>Vamos a calcular tu peso ideal</h3>
+                <p>Dime cuánto pesas: 
+                  
+                  <input type="text" name="pesoI" id="pesoI">
+                  <input type="button" name="btn" id="btn" value="calcular">
+                </p>
+                <p id="pRes"></p>
+            <hr>
+            <h3>Calculemos tu peso en uno de los planetas del sistema</h3>
+            <p>Primero dinos tu peso: 
+              
+              <input type="text" name="pesoT" id="pesoT">
+            , ahora elige un planeta de la lista: 
+            
+            <select name="select" id="planetas">
+              <option value="n">selecciona</option>
+              <option value="3.7">Mercurio</option>
+              <option value="8.87">Venus</option>
+              <option value="9.8">Tierra</option>
+              <option value="3.7">Marte</option>
+              <option value="25.8">Júpiter</option>
+            </select>
+            <input type="button" name="btn2" id="btn2" value="calcular">
+            </p>
+            <p id="pRes2"></p>
+          </div>
+        </div>
+    </div>
+    
+    
+    <div id="barraInf">
+        <p>contenido de barra inferior</p>
+    </div>
+    <div id="mascota"></div>
+    <script src="scripts.js"></script>
+    <script>
+    var pesoI, pesoF, btn, pRes;
+        
+        
+        btn = document.getElementById("btn");
+        pRes = document.getElementById("pRes");
+        
+        btn.addEventListener('click', fnRes);
+        
+        function fnRes(e){
+            pesoI = document.getElementById("pesoI").value;
+            pesoF = Number(pesoI) + 10;
+                  console.log('El peso inicial es: '+pesoI+'\nTu peso ideal es: '+pesoF);
+            //pRes.innerText = 'Tu peso ideal es: '+pesoF+'Kg';
+            pRes.innerHTML = 'Tu peso ideal es: <strong style="color: #2A32CD">'+pesoF+'Kg</strong>';
+            //pRes.style.color = '#f00';
+        }
+        
+        
+        /*CALCULAR EL PESO EN OTRO PLANETA:*/
+        
+        //declaración de variables:
+        var pesoT, P, M, G, btn2, pRes2, planeta ;
+        
+        //asignación de variables:
+        btn2 = document.getElementById("btn2");
+        pRes2 = document.getElementById("pRes2");
+        planeta = 'planeta';
+        
+        //suscripciones interactivas:
+        btn2.addEventListener('click', fnRes2);
+        
+        //definición de funciones y EventListeners
+        function fnRes2(e){
+            var varLocal = 3;
+            pesoT = document.getElementById("pesoT").value;
+            M = pesoT/9.8;
+            G = document.getElementById("planetas").value;
+            P = M * G;
+            console.log(varLocal);
+            
+            
+            if(pesoT != "" & !(isNaN(pesoT)) & G != 'n' ){
+                pRes2.innerHTML = 'Tu peso en <strong style="color: #023374">'+planeta+'</strong> es <strong style="color: #760001">'+Math.round(P)+'kg</strong>';    
+            }else{
+                pRes2.innerHTML = '<strong style="color: red;">Primero pon tu peso y elige un planeta </strong>';    
+            }
+            
+            
+            //alert('Hola '+nombre);
+        }
+    
+        
+        //Estructuras condicionales:
+        
+        var aleatorio = Math.round(Math.random()*8); //NÚMERO ENTRE '0' Y '8'
+        //var random = Math.round(Math.random()*(9-3)+3);  //NÚMERO ENTRE '3'Y '9'
+        
+        
+        
+        var random = random(2,4);
+        
+        /*
+        N = 1
+        M = 2
+        K = N+M*2
+        K? -> 5 //
+        */
+        
+        //if((aleatorio == 1 & otraCosa == 'otracosa') | (XX == 3 | YY == 2){       // >, <, >=, <=, !=, == | and (&), or (|), not (!);
+           //console.log('aleatorio es UNO'+'\n'+aleatorio);
+           //}
+        
+        /*if(aleatorio){
+            console.log('aleatorio es UNO'+'\n'+aleatorio);
+        }
+        else{
+            console.log('aleatorio es DOS'+'\n'+aleatorio);
+        }*/
+        
+    /*    if(random == 3){
+            console.log('Random es TRES'+'\n'+random);
+        }
+        else if(random == 4){
+            console.log('Random es CUATRO'+'\n'+random);  
+                 }
+        else if(random == 5){
+              console.log('Random es CINCO'+'\n'+random);  
+                 }
+        else if(random == 8 | random == 9){
+              console.log('Random es 8 ó 9'+'\n'+random);  
+                 }
+        else {//6 y 7
+              console.log('CatchAll (else) Random es 6 ó 7'+'\n'+random);  
+                 }*/
+        
+        switch(random){
+            case 3:
+                console.log('Random es TRES'+'\n'+random);
+                break;
+            case 4:
+                console.log('Random es CUATRO'+'\n'+random);
+                break;  
+            case 5:
+                console.log('Random es CINCO'+'\n'+random);
+                break;
+            case 8:
+            case 9:
+                console.log('Random es 8 ó 9'+'\n'+random);
+               break;
+            
+            default:
+               console.log('CatchAll (else) Random es 6 ó 7'+'\n'+random); 
+                
+               }
+        
+        
+        //frases aleatorias:
+        (function cita(){
+           var frase = random2(1,3);
+            var pLeyes = document.getElementById('pLeyes');
+            pLeyes.innerText=frases[frase]; 
+        })();
+        
+/*        function cita(){
+           var frase = random(1,3);
+            var pLeyes = document.getElementById('pLeyes');
+            pLeyes.innerText=frases[frase]; 
+        }cita();*/
+    </script>
+    
+    <!--Carlos, la versión ofuscada de este script es OFUSCADO.js -->
+    <!--En esta página vimos el ejemplo de ofuscador: https://codebeautify.org/javascript-obfuscator#
+    Existe también la ofuscación con llave en servidor (la más segura)-->
+</body>
+</html>

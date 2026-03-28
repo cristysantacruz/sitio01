@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>aquí título</title>
+    <meta name="description" content="aqu&iacute; descripci&oacute;n">
+<meta name="keywords" content="aquí kw">
+
+<style type="text/css">
+</style>
+<link href="css/base.css" rel="stylesheet" type="text/css">
+</head>
+
+<body id="pcontacto">
+    <div id="contenedor">
+        <div id="header">
+            <div id="logo"></div>
+            <nav>
+                <ul>
+                    <li><a id="lhome" href="index.html">Home</a></li>
+                    <li><a id="lanim" href="animacion.html">Animación</a></li>
+                    <li><a id="liframes" href="iframes.html">iFrames</a></li>
+                    <li><a id="lcontacto" href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+          <div id="texto">
+                <h1>Contacto</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima assumenda at nihil voluptatibus eius molestiae dicta, pariatur libero distinctio! Cumque mollitia ad labore recusandae veniam iure ut rem enim et!</p>
+                <form action="gracias.html" method="post" name="contacto" id="contacto">
+                  <table width="100%" border="0" cellspacing="0" cellpadding="5">
+                    <tbody>
+                      <tr>
+                        <td width="44%"><label for="nombre">Nombre:</label></td>
+                        <td width="56%"><input type="text" name="nombre" id="nombre" required placeholder="nombre"></td>
+                      </tr>
+                      <tr>
+                        <td><label for="email">Email:</label></td>
+                        <td><input type="email" name="email" id="email" required placeholder="tucorreo@.com"></td>
+                      </tr>
+                      <tr>
+                        <td><label for="pass">Pass:</label></td>
+                        <td><input type="password" name="pass" id="pass"></td>
+                      </tr>
+                      <tr>
+                        <td>Servicios:</td>
+                        <td><p>
+                          <label>
+                            <input type="checkbox" name="servicios" value="01" id="servicios_0">
+                            alimento</label>
+                          <label>
+                            <input type="checkbox" name="servicios" value="02" id="servicios_1">
+                          estética</label>
+                          <br>
+                          <label>
+                            <input type="checkbox" name="servicios" value="03" id="servicios_2">
+                            pensión</label>
+                          <label>
+                            <input type="checkbox" name="servicios" value="04" id="servicios_3">
+                          clínica</label>
+                          <br>
+                        </p></td>
+                      </tr>
+                      <tr>
+                        <td>Forma de pago:</td>
+                        <td><p>
+                          <label>
+                            <input type="radio" name="pago" value="con" id="pago_0">
+                            contado</label>
+                          <label>
+                            <input type="radio" name="pago" value="cre" id="pago_1">
+                          crédito</label>
+                          <br>
+                        </p></td>
+                      </tr>
+                      <tr>
+                        <td><label for="select">Sucursal:</label></td>
+                        <td><select name="select" id="select">
+                          <option value="0">elija aquí</option>
+                            <option value="n">norte</option>
+                            <option value="c">centro</option>
+                            <option value="s">sur</option>
+                        </select></td>
+                      </tr>
+                      <tr>
+                        <td><label for="comentarios">Comentarios:</label></td>
+                        <td><textarea name="comentarios" rows="5" id="comentarios" placeholder="aquí brevemente tus commentarios"></textarea></td>
+                      </tr>
+                      <tr>
+                        <td colspan="2" align="center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium perspiciatis, nobis voluptates.</td>
+                      </tr>
+                      <tr>
+                        <td>&nbsp;</td>
+                        <td><input type="submit" name="submit" id="submit" value="enviar"></td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </form>
+                <p>&nbsp;</p>
+          </div>
+        </div>
+    </div>
+    
+    
+    <div id="barraInf">
+        <p>contenido de barra inferior</p>
+    </div>
+    <div id="mascota"></div>
+</body>
+</html>
